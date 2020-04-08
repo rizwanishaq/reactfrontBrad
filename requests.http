@@ -1,16 +1,44 @@
+# My Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4ZDk1N2YyMDBhYTcyNjUyMWU0YzI1In0sImlhdCI6MTU4NjMzODcxNywiZXhwIjoxNTg2Njk4NzE3fQ.ChR446yYuA-D-w6cdYDDkH4WV65kYUNYHBoWg_7TIJ0
 ### Get request (auth)
 GET http://localhost:5000/api/auth
+HEAD 
+"x-auth-token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4ZDk1N2YyMDBhYTcyNjUyMWU0YzI1In0sImlhdCI6MTU4NjMzODcxNywiZXhwIjoxNTg2Njk4NzE3fQ.ChR446yYuA-D-w6cdYDDkH4WV65kYUNYHBoWg_7TIJ0"
 
 ### Get contact
 PUT http://localhost:5000/api/contacts/1
 
 ### Post Request
-POST http://localhost:5000/api/auth
+GET http://localhost:5000/api/auth
 
-### POST request
-POST http://localhost:5000/api/v1/1234123412341412-123422134
+### Register User
+POST http://localhost:5000/api/users
 Content-Type: application/json
 
 {
-   "name": "Rizwan Ishaq 1"
+   "name": "John Doe",
+   "email": "whatever@gmail.com",
+   "password": "1234567"
 }
+
+### Register User
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+   "name": "san Doe",
+   "email": "whatever1@gmail.com",
+   "password": "1234567"
+}
+
+
+### Login User
+POST http://localhost:5000/api/auth
+Content-Type: application/json
+
+{
+   "email": "whatever@gmail.com",
+   "password": "1234567"
+}
+
+
